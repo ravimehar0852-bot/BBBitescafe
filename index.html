@@ -3,29 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BB Bites — by Berozgaar Boyzz | Bhilwara</title>
-<meta name="description" content="BB Bites by Berozgaar Boyzz — coffee, waffles, sizzlers &amp; mocktails in Shastri Nagar, Bhilwara. The taste with the elegance, since 2026.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="style.css">
+<title>BB Bites by Berozgaar Boyzz — Taste with the Elegance</title>
+<meta name="description" content="BB Bites — a cosy Bhilwara cafe serving coffee, waffles, sizzlers, pizza, shakes and more. Family recipes, modern flavours.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="site-header">
-  <nav class="container nav">
-    <a href="index.html" class="brand">BB Bites<small>Berozgaar&nbsp;Boyzz</small></a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" aria-current="page">Home</a></li>
+  <nav class="nav wrap">
+    <a href="index.html" class="brand">
+      <span class="brand-badge">BB</span>
+      <span class="brand-text">
+        <span class="name">BB BITES</span>
+        <span class="tag">by Berozgaar Boyzz</span>
+      </span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
       <li><a href="menu.html">Menu</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Visit Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html#location" class="nav-cta">Find Us</a></li>
     </ul>
-    <div class="nav-cta">
-      <a href="menu.html" class="btn --ghost">View Menu</a>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span>
-      </button>
-    </div>
+    <button class="burger" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
   </nav>
 </header>
 
@@ -33,123 +35,149 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="blob-field" aria-hidden="true">
-      <div class="blob --blush" style="width:340px;height:340px;top:-120px;left:-100px;"></div>
-      <div class="blob --sage" style="width:260px;height:260px;bottom:-80px;right:-60px;"></div>
-      <div class="blob --gold" style="width:180px;height:180px;top:20%;right:8%;"></div>
-    </div>
-    <div class="container hero-inner">
+    <div class="hero-blob"></div>
+    <svg class="leaf-corner tl" viewBox="0 0 200 200" aria-hidden="true">
+      <path d="M6 190 C 40 150, 26 100, 62 66 C 84 44, 118 34, 150 18" stroke="#8CA07A" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <path d="M20 170 C 30 150, 40 145, 55 135" stroke="#8CA07A" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+      <ellipse cx="150" cy="18" rx="7" ry="10" fill="#D98E86" opacity="0.85" transform="rotate(30 150 18)"/>
+      <ellipse cx="132" cy="30" rx="6" ry="9" fill="#D98E86" opacity="0.7" transform="rotate(10 132 30)"/>
+      <path d="M62 66 C 50 60, 40 62, 32 74" stroke="#8CA07A" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+    </svg>
+    <svg class="leaf-corner tr" viewBox="0 0 200 200" aria-hidden="true">
+      <path d="M6 190 C 40 150, 26 100, 62 66 C 84 44, 118 34, 150 18" stroke="#8CA07A" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <ellipse cx="150" cy="18" rx="7" ry="10" fill="#D98E86" opacity="0.85" transform="rotate(30 150 18)"/>
+      <ellipse cx="132" cy="30" rx="6" ry="9" fill="#D98E86" opacity="0.7" transform="rotate(10 132 30)"/>
+    </svg>
+    <div class="wrap">
       <span class="eyebrow">Est. 2026 · Shastri Nagar, Bhilwara</span>
-      <h1>BB Bites</h1>
-      <p class="hero-tag">The Taste with the Elegance ✦ Family Recipes &amp; Modern Flavors</p>
-      <div class="btn-row">
-        <a href="menu.html" class="btn --blush">Explore the Menu</a>
-        <a href="contact.html" class="btn --ghost">Find Us</a>
+      <h1>BB BITES
+        <span class="script">Taste with the Elegance</span>
+      </h1>
+      <p class="lede">Family recipes and modern flavours, served warm — from hand-tossed pizzas and sizzlers to Belgian waffles, mocktails and thick shakes. Pull up a chair.</p>
+      <div class="hero-actions">
+        <a href="menu.html" class="btn btn-solid">View Full Menu</a>
+        <a href="contact.html#location" class="btn btn-outline">Get Directions</a>
       </div>
-      <div class="stamp" aria-hidden="true"><span>Fresh<br>Daily</span></div>
-    </div>
-  </section>
-
-  <!-- MARQUEE -->
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span>Coffee &amp; Chai<span>Sizzlers</span><span>Wood-fired Pizza</span><span>Belgian Waffles</span><span>Mocktails</span><span>Maska Bun</span></span>
-      <span>Coffee &amp; Chai<span>Sizzlers</span><span>Wood-fired Pizza</span><span>Belgian Waffles</span><span>Mocktails</span><span>Maska Bun</span></span>
-    </div>
-  </div>
-
-  <!-- HIGHLIGHTS -->
-  <section class="band">
-    <div class="container">
-      <div class="section-head --center reveal">
-        <span class="eyebrow">What we're known for</span>
-        <h2>A little bit of everything, made properly</h2>
-        <p class="lede">From your first cup of chai to a sizzler that lands at the table still hissing — every plate is built around the same idea: keep it simple, keep it generous.</p>
-      </div>
-
-      <div class="grid --4">
-        <article class="card reveal">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9z"/><path d="M17 10h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 3c0 1.2-1 1.3-1 2.5S8 7 8 8"/><path d="M12 3c0 1.2-1 1.3-1 2.5S12 7 12 8"/></svg>
-          <h3>Coffee &amp; Chai</h3>
-          <p>Cold coffee thick shakes, classic masala chai and everything between — poured slow, served warm.</p>
-        </article>
-        <article class="card reveal">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M7 6V4h10v2"/><path d="M7 10h.01M11 10h.01M15 10h.01M7 14h.01M11 14h.01M15 14h.01M7 18h.01M11 18h.01M15 18h.01"/></svg>
-          <h3>Belgian Waffles</h3>
-          <p>Crisp lattice waffles piled with Nutella, fresh fruit or our Death by Chocolate special.</p>
-        </article>
-        <article class="card reveal">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 20h16"/><ellipse cx="12" cy="12" rx="9" ry="5"/><path d="M6 12c1-2 3-3 6-3s5 1 6 3"/></svg>
-          <h3>Sizzlers &amp; Mains</h3>
-          <p>Chinese and Mexican sizzlers, loaded pizzas and pastas built for sharing.</p>
-        </article>
-        <article class="card reveal">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M8 3l1 4M16 3l-1 4M6 7h12l-1.5 12a2 2 0 0 1-2 1.8h-5a2 2 0 0 1-2-1.8L6 7z"/></svg>
-          <h3>Mocktails &amp; Shakes</h3>
-          <p>Blue Lagoon, Watermelon Chiller, Brownie Shake — cold, colourful, and photo-ready.</p>
-        </article>
+      <div class="rating-strip">
+        <span class="stars">★★★★★</span>
+        <span>5.0 rating · 16 reviews on Google</span>
       </div>
     </div>
   </section>
 
-  <!-- STORY TEASER -->
-  <section class="band --paper">
-    <div class="container about-split">
-      <div class="reveal">
-        <span class="eyebrow">Our story</span>
-        <h2>Two friends,<br>one small kitchen,<br>a big appetite for it.</h2>
+  <!-- WHY BB BITES -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Why we're loved</span>
+        <h2>A little elegance with every bite</h2>
+        <div class="divider"></div>
       </div>
-      <div class="reveal">
-        <p class="lede">BB Bites started as a joke between two "berojgaar boyzz" who loved cooking more than their day jobs. What began as recipes traded between friends turned into a menu, then a kitchen, then a cafe. We still cook the way we did on day one — fresh, unhurried, and a little too generous with the cheese.</p>
-        <div class="btn-row" style="margin-top:1.6rem;">
-          <a href="about.html" class="btn --ghost">Read Our Story</a>
+      <div class="grid-3">
+        <div class="card">
+          <div class="icon">☕</div>
+          <h3>Family Recipes</h3>
+          <p>Recipes passed down and perfected — reworked with modern presentation, without losing the original comfort.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🌿</div>
+          <h3>Fresh, Always</h3>
+          <p>Everything is made to order — pizzas, sandwiches, sizzlers and shakes, prepared fresh the moment you order.</p>
+        </div>
+        <div class="card">
+          <div class="icon">✨</div>
+          <h3>Premium, Yet Cosy</h3>
+          <p>A warm, elegant space in Shastri Nagar built for long conversations over coffee, waffles and good company.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- RATING / SOCIAL BAND -->
-  <section class="band --ink">
-    <div class="container" style="display:flex;flex-wrap:wrap;gap:2rem;align-items:center;justify-content:space-between;">
-      <div class="reveal">
-        <span class="eyebrow" style="color:var(--blush);">Loved by our regulars</span>
-        <h2 style="margin-top:0.4rem;">5.0 ★ on Google · 16 reviews</h2>
-        <p style="max-width:52ch;">"Go head bb bites." — one of our favourite reviews, and honestly, still the best summary of the menu.</p>
+  <!-- SIGNATURE PICKS -->
+  <section class="section" style="background:var(--cream-deep);">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Crowd favourites</span>
+        <h2>Signature BB Specials</h2>
+        <div class="divider"></div>
       </div>
-      <a href="contact.html" class="btn --blush reveal">Get Directions</a>
+      <div class="dish-strip">
+        <div class="dish">
+          <span class="emoji">🍕</span>
+          <h4>BB Special Pizza</h4>
+          <span class="price">₹209</span>
+        </div>
+        <div class="dish">
+          <span class="emoji">🧇</span>
+          <h4>Fruit Farm BB Special Waffle</h4>
+          <span class="price">₹299</span>
+        </div>
+        <div class="dish">
+          <span class="emoji">🍔</span>
+          <h4>BB Special Burger</h4>
+          <span class="price">₹129</span>
+        </div>
+        <div class="dish">
+          <span class="emoji">🥤</span>
+          <h4>BB Special Mocktail</h4>
+          <span class="price">₹169</span>
+        </div>
+      </div>
+      <div class="insta-cta">
+        <a href="menu.html" class="btn btn-outline">See the Whole Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK CONTACT / QR TEASER -->
+  <section class="section">
+    <div class="wrap grid-2">
+      <div>
+        <span class="eyebrow">Visit us</span>
+        <h2 style="font-family:var(--f-display); font-size:2rem; margin:0.2em 0 0.5em;">Solanki Talkies Rd, Shastri Nagar</h2>
+        <p style="color:var(--ink-soft); line-height:1.7;">B Sector, C Sector, Shastri Nagar, Bhilwara, Rajasthan 311001. Open daily — drop by for coffee, or scan our menu QR right at your table.</p>
+        <div class="hero-actions" style="justify-content:flex-start; margin-top:1.4rem;">
+          <a href="contact.html" class="btn btn-solid">Contact &amp; Directions</a>
+        </div>
+      </div>
+      <div class="story-figure">
+        <div class="badge-lg">BB</div>
+        <p class="est">Est. 2026</p>
+        <p style="color:var(--ink-soft); margin-top:10px;">Follow along on Instagram <strong>@the_bb_bites</strong> for daily specials and behind-the-scenes.</p>
+      </div>
     </div>
   </section>
 
 </main>
 
 <footer class="site-footer">
-  <div class="container">
+  <svg class="leaf-corner br" viewBox="0 0 200 200" aria-hidden="true" style="opacity:0.18;">
+    <path d="M6 190 C 40 150, 26 100, 62 66 C 84 44, 118 34, 150 18" stroke="#F8F2E4" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  </svg>
+  <div class="wrap">
     <div class="footer-grid">
-      <div class="footer-col">
-        <a href="index.html" class="brand">BB Bites<small>Berozgaar&nbsp;Boyzz</small></a>
-        <p style="margin-top:1rem;max-width:32ch;">B Sector, Shastri Nagar, Bhilwara — the taste with the elegance, since 2026.</p>
-        <div class="social-row">
-          <a class="social-btn" href="https://www.instagram.com/the_bb_bites" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
-          </a>
-        </div>
+      <div class="footer-brand">
+        <span class="name">BB BITES</span>
+        <span class="tag">by Berozgaar Boyzz</span>
+        <p>Family recipes and modern flavours — coffee, waffles, sizzlers, pizza and more, served with elegance in Shastri Nagar, Bhilwara.</p>
       </div>
       <div class="footer-col">
-        <h4>Explore</h4>
+        <h5>Explore</h5>
         <a href="menu.html">Full Menu</a>
         <a href="about.html">Our Story</a>
         <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Visit Us</a>
+        <a href="contact.html">Contact</a>
       </div>
       <div class="footer-col">
-        <h4>Find Us</h4>
-        <p>Solanki Talkies Rd, B Sector,<br>Shastri Nagar, Bhilwara,<br>Rajasthan 311001</p>
+        <h5>Reach Us</h5>
+        <p>Solanki Talkies Rd, Shastri Nagar, Bhilwara, Rajasthan 311001</p>
         <a href="https://maps.app.goo.gl/3ur3Chd5AxErweRk6?g_st=iw" target="_blank" rel="noopener">Get Directions →</a>
+        <a href="https://instagram.com/the_bb_bites" target="_blank" rel="noopener">@the_bb_bites</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <span id="year"></span> BB Bites by Berozgaar Boyzz.</span>
-      <span>Designed with ✦ in Bhilwara</span>
+      <span>© 2026 BB Bites by Berozgaar Boyzz. All rights reserved.</span>
+      <span>Taste with the Elegance ✨</span>
     </div>
   </div>
 </footer>
