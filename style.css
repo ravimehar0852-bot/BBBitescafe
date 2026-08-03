@@ -844,3 +844,23 @@ button{ font-family:inherit; }
     color:#5b4e3c;
     font-weight:500;
 }
+.menu-qr{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.menu-qr img{
+    width: 180px;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.menu-qr p{
+    margin: 0;
+    font-size: 18px;
+}
