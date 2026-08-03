@@ -726,3 +726,99 @@ button{ font-family:inherit; }
     font-size:13px;
     color:#6d5a4d;
 }
+/* ==========================
+   MOBILE RESPONSIVE
+========================== */
+
+@media (max-width:768px){
+
+  .wrap{
+    width:92%;
+    margin:auto;
+  }
+
+  .nav{
+    padding:12px 0;
+  }
+
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+
+  .logo{
+    width:55px;
+    height:55px;
+  }
+
+  .name{
+    font-size:20px;
+  }
+
+  .tag{
+    font-size:12px;
+  }
+
+  .nav-links{
+    display:none;
+  }
+
+  .hero{
+    padding:80px 0 50px;
+    text-align:center;
+  }
+
+  .hero h1{
+    font-size:42px;
+    line-height:1.2;
+  }
+
+  .script{
+    display:block;
+    font-size:28px;
+  }
+
+  .lede{
+    font-size:17px;
+    line-height:1.7;
+  }
+
+  .hero-actions{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .btn{
+    width:100%;
+    text-align:center;
+  }
+
+  .grid-2,
+  .grid-3{
+    grid-template-columns:1fr;
+  }
+
+  .dish-strip{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+
+  .card,
+  .dish{
+    width:100%;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .footer-bottom{
+    flex-direction:column;
+    text-align:center;
+    gap:10px;
+  }
+
+}
