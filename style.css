@@ -824,3 +824,23 @@ button{ font-family:inherit; }
   }
 
 }
+.menu-qr{
+    text-align:center;
+    margin-top:25px;
+}
+
+.menu-qr img{
+    width:180px;
+    height:180px;
+    border-radius:12px;
+    background:#fff;
+    padding:10px;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+}
+
+.menu-qr p{
+    margin-top:10px;
+    font-size:15px;
+    color:#5b4e3c;
+    font-weight:500;
+}
