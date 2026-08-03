@@ -696,3 +696,33 @@ button{ font-family:inherit; }
     width:auto;
     display:block;
 }
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+}
+
+.logo{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.brand-text{
+    display:flex;
+    flex-direction:column;
+    line-height:1.1;
+}
+
+.name{
+    font-size:22px;
+    font-weight:700;
+    color:#2b1d15;
+}
+
+.tag{
+    font-size:13px;
+    color:#6d5a4d;
+}
