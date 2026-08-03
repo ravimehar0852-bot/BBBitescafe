@@ -1,87 +1,94 @@
-/* BB Bites — shared interactivity */
+// ==========================================================================
+// BB BITES — shared behaviour
+// ==========================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ---------- mobile nav toggle ---------- */
-  const toggle = document.querySelector('.nav-toggle');
-  const links  = document.querySelector('.nav-links');
+  /* ---- mobile nav toggle ---- */
+  const burger = document.querySelector('.burger');
+  const navLinks = document.querySelector('.nav-links');
 
-  if (toggle && links) {
-    toggle.addEventListener('click', () => {
-      const open = links.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', String(open));
+  if (burger && navLinks) {
+    burger.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      burger.classList.toggle('open', isOpen);
+      burger.setAttribute('aria-expanded', String(isOpen));
     });
 
-    links.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        links.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        burger.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
       });
     });
   }
 
-  /* ---------- scroll reveal ---------- */
-  const revealEls = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window && revealEls.length) {
+  /* ---- highlight current page in nav ---- */
+  const current = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    const href = a.getAttribute('href');
+    if (href === current || (current === '' && href === 'index.html')) {
+      a.classList.add('active');
+    }
+  });
+
+  /* ---- menu category tab filter (menu.html) ---- */
+  const tabs = document.querySelectorAll('.menu-tab');
+  const categories = document.querySelectorAll('.menu-category');
+
+  if (tabs.length && categories.length) {
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const target = tab.dataset.target;
+
+        if (target === 'all') {
+          categories.forEach(c => c.style.display = '');
+        } else {
+          categories.forEach(c => {
+            c.style.display = c.id === target ? '' : 'none';
+          });
+          const el = document.getElementById(target);
+          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  }
+
+  /* ---- QR code generation (contact.html) ---- */
+  const qrBox = document.getElementById('menu-qr');
+  if (qrBox && window.QRCode) {
+    const menuURL = window.location.origin + window.location.pathname.replace(/[^/]*$/, 'menu.html');
+    new QRCode(qrBox, {
+      text: menuURL,
+      width: 166,
+      height: 166,
+      colorDark: '#241C13',
+      colorLight: '#ffffff',
+      correctLevel: QRCode.CorrectLevel.M
+    });
+  }
+
+  /* ---- reveal-on-scroll for cards/sections ---- */
+  const revealEls = document.querySelectorAll('.card, .dish, .menu-category, .gallery-item, .story-figure');
+  if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
           io.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.1 });
 
-    revealEls.forEach((el, i) => {
-      el.style.transitionDelay = `${Math.min(i % 6, 5) * 70}ms`;
+    revealEls.forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(16px)';
+      el.style.transition = 'opacity .5s ease, transform .5s ease';
       io.observe(el);
     });
-  } else {
-    revealEls.forEach(el => el.classList.add('is-visible'));
   }
-
-  /* ---------- menu category filter (menu.html) ---------- */
-  const tabs = document.querySelectorAll('.menu-tab');
-  const cards = document.querySelectorAll('.menu-card');
-
-  if (tabs.length && cards.length) {
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        tabs.forEach(t => t.classList.remove('is-active'));
-        tab.classList.add('is-active');
-
-        const filter = tab.dataset.filter;
-        cards.forEach(card => {
-          const show = filter === 'all' || card.dataset.group === filter;
-          card.style.display = show ? '' : 'none';
-        });
-      });
-    });
-  }
-
-  /* ---------- QR code (contact.html) ---------- */
-  const qrTarget = document.getElementById('qrcode');
-  if (qrTarget && window.QRCode) {
-    // Points at menu.html relative to wherever this site is hosted.
-    // Once you upload the site to your domain, this resolves automatically —
-    // no need to touch the code.
-    const menuURL = new URL('menu.html', window.location.href).href;
-
-    new QRCode(qrTarget, {
-      text: menuURL,
-      width: 168,
-      height: 168,
-      colorDark: '#2b241c',
-      colorLight: '#fbf8f1',
-      correctLevel: QRCode.CorrectLevel.M
-    });
-
-    const link = document.getElementById('qr-url');
-    if (link) { link.textContent = menuURL; link.href = menuURL; }
-  }
-
-  /* ---------- footer year ---------- */
-  const yearEl = document.getElementById('year');
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
-
 });
