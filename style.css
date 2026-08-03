@@ -658,8 +658,9 @@ button{ font-family:inherit; }
 }
 
 @media (max-width:760px){
-  .nav-links{
-     display:flex;
+  .nav-links.active,
+.nav-links.open{
+    display:flex !important;
     position:fixed;
     top:73px; left:0; right:0;
     background:var(--cream);
